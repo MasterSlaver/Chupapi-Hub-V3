@@ -1,0 +1,244 @@
+
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
+local Window = Library.CreateLib("Chupapi Hub", "BloodTheme")
+
+-- MAIN
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("FunScripts")
+
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "ScreenGui"
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
+ 
+local Toggle = Instance.new("TextButton")
+Toggle.Name = "Toggle"
+Toggle.Parent = ScreenGui
+Toggle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Toggle.Position = UDim2.new(0, 0, 0.454706937, 0)
+Toggle.Size = UDim2.new(0, 90, 0, 38)
+Toggle.Font = Enum.Font.SourceSans
+Toggle.Text = "Chupapi Hub"
+Toggle.TextColor3 = Color3.fromRGB(238, 75, 43)
+Toggle.TextSize = 16.000
+Toggle.Draggable = false
+Toggle.MouseButton1Click:connect(function()
+    Library:ToggleUI()
+end)
+ 
+local Corner = Instance.new("UICorner")
+Corner.Name = "Corner"
+Corner.Parent = Toggle
+
+
+MainSection:NewButton("Fly", "You Can Basically Fly Dumbass", function()
+loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
+end)
+
+MainSection:NewToggle("Super-Nigga", "go fast and jump high because you nigga", function(state)
+    if state then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 120 
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 120
+    else
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16 
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    end
+end)
+
+MainSection:NewButton("Infinite Yield", "FE Admin Commands", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))() 
+end)
+
+MainSection:NewButton("ScriptHub", "All Games", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/scripthubekitten/SCRIPTHUBV2/main/SCRIPTHUBV2", true))()
+end)
+
+--LOCAL PLAYER
+local Player = Window:NewTab("Player")
+local PlayerSection = Player:NewSection("Player")
+
+PlayerSection:NewButton("God mode", "Uh idk u cant die i guess", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/FwfNEqYz", true))()
+end)
+
+PlayerSection:NewSlider("WalkSpeed", "Go Faster Vroom", 500, 16, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+PlayerSection:NewSlider("JumpPower", "Go Higher Boing", 350, 50, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+PlayerSection:NewButton("Reset WP/JP", "Resets to all defaults", function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16 
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+end)
+
+
+--Other
+local Other = Window:NewTab("Other")
+local OtherSection = Other:NewSection("Other")
+
+OtherSection:NewButton("Fe bypass v3 script ", "It does stuff", function()
+    loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\103\48\48\108\88\112\108\111\105\116\101\114\47\103\48\48\108\88\112\108\111\105\116\101\114\47\109\97\105\110\47\70\101\37\50\48\98\121\112\97\115\115\34\44\32\116\114\117\101\41\41\40\41\10")()
+end)
+
+OtherSection:NewButton("Backflip", "Do backflips!", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/yjxXnxbS'))()
+end)
+
+OtherSection:NewButton("kill aura", "kills people", function()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/yeerma/such/main/migga'))()
+end)
+
+OtherSection:NewButton("Tp gui", "Teleports you to another player", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/AbDM2er1"))()
+end)
+
+OtherSection:NewButton("Fling gui", "Fling people!", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/r97d7dS0', true))()
+end)
+
+OtherSection:NewButton("Nameless admin", "Gives admin", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))();
+end)
+
+OtherSection:NewButton("Admin tool", "Gives tools", function()
+    loadstring(game:HttpGet(('https://pastefy.app/VYIAk3o1/raw'),true))()
+end)
+
+OtherSection:NewButton("fling people script", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://gist.githubusercontent.com/dark-modz/0ef7e0cc9f92a64c874a3c5a75c88ade/raw/0b9e8b37d1b9d2e2676707f76297ba9f530cb0bd/rocketfling",true))()
+end)
+
+OtherSection:NewButton("fly v3", "ButtonInfo", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/YSL3xKYU'))()
+end)
+
+OtherSection:NewButton("Chat Spoofer", "Lets you chat for other people", function()
+    loadstring(game:HttpGet(('https://pastebin.com/raw/djBfk8Li'),true))()
+end)
+
+OtherSection:NewButton("Bypassed Fly", "bird mode", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/BypassedFly.lua"))() 
+    
+    Fly(true)
+end)
+
+OtherSection:NewButton("Kill aura", "Kills people", function()
+       while wait () do
+  for i, e in pairs(game.Players:GetChildren()) do
+                        if e ~= game.Players.LocalPlayer then
+                            local meleeEvent = game:GetService("ReplicatedStorage").meleeEvent
+                            meleeEvent:FireServer(e)
+                            
+                        end end end 
+end)  
+
+local Brookhaven = Window:NewTab("Brookhaven")
+local BrookhavenSection = Brookhaven:NewSection("Brookhaven")
+
+BrookhavenSection:NewButton("Ice hub", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))() 
+end)
+
+BrookhavenSection:NewButton("BROOKHAVEN OP TROLL GUI", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/Siw4mbQd",true))()
+end)
+
+BrookhavenSection:NewButton("BROOKHAVEN ADMIN TOOL", "ButtonInfo", function()
+    loadstring(game:HttpGet(('https://pastefy.app/VYIAk3o1/raw'),true))()
+end)
+
+BrookhavenSection:NewButton("Brookhaven admin panel", "ButtonInfo", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/IceMael7/IceHubAdmin/main/IceHub'))()
+end)
+
+BrookhavenSection:NewButton("LAZER GUN SCRIPT", "ButtonInfo", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/SBbr8YHZ'))()
+end)
+
+BrookhavenSection:NewButton("Fe Brookhaven kill all", "ButtonInfo", function()
+    loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\65\99\117\114\97\88\48\52\57\47\111\98\102\117\115\99\97\116\101\100\83\99\114\105\112\116\115\47\109\97\105\110\47\75\105\108\108\71\117\105\34\41\41\40\41\10")()
+end)
+
+BrookhavenSection:NewButton("Free gamepass", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/AvatarUnlocker/main/IceHub"))()
+end)
+
+local Fe = Window:NewTab("Fe")
+local FeSection = Fe:NewSection("Fe")
+
+FeSection:NewButton("FE BLOCK SPAWNER SCRIPT", "ButtonInfo", function()
+    local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local part = Instance.new("Part")
+part.BrickColor = BrickColor.new("Bright blue")
+part.Size = Vector3.new(5, 5, 5)
+
+while true do
+    local position = character.PrimaryPart.Position
+    local randomOffset = Vector3.new(math.random(-10, 10), math.random(-10, 10), math.random(-10, 10))
+    part:Clone().Parent = workspace
+    part.Position = position + randomOffset
+    wait(0.1) -- Adjust the delay between spawns as desired
+end
+end)
+
+FeSection:NewButton("FE RAINBOW MAP", "ButtonInfo", function()
+    --Made by SUPERSONIC GAMERZ 
+while true do
+    for _, part in ipairs(workspace:GetDescendants()) do
+        if part:IsA("BasePart") then
+            local r = math.random()
+            local g = math.random()
+            local b = math.random()
+            part.BrickColor = BrickColor.new(Color3.new(r, g, b))
+        end
+    end
+    wait(0.5)
+end
+end)
+
+FeSection:NewButton("Telekenies", "Uh i dont know if its spelled corretly dont ask me", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/SAZXHUB/Control-update/main/README.md'),true))()
+end)
+
+local PrisonLife = Window:NewTab("PrisonLife")
+local PrisonLifeSection = PrisonLife:NewSection("PrisonLife")
+
+PrisonLifeSection:NewButton("PrisonLifeAdmin", "TigerAdmin Better", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/zZ3m0akh"))()
+end)
+
+PrisonLifeSection:NewButton("TigerAdmin", "Best Prison Life Script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/Tigeradmin"))()
+end)
+
+PrisonLifeSection:NewButton("PrisonLifeGui", "What else could it be dumbass", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Denverrz/scripts/master/PRISONWARE_v1.3.txt"))();
+end)
+
+local Bloxfruit = Window:NewTab("Bloxfruit")
+local BloxfruitSection = Bloxfruit:NewSection("Bloxfruit")
+
+BloxfruitSection:NewButton("CFrame", "BloxFruits Script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CFrame3310/CFrameHub/main/BloxFruit_Mobile.lua"))()
+end)
+
+BloxfruitSection:NewButton("FlareHub", "BloxFruits Script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/master/flares"))()
+end)
+
+BloxfruitSection:NewButton("ThunderZ", "BloxFruits Script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ThunderZ-05/HUB/main/Mobile-Loader"))()
+end)
+
+BloxfruitSection:NewButton("UraniumMobile", "BloxFruits Script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Augustzyzx/UraniumMobile/main/UraniumKak.lua"))()
+end)
+
+BloxfruitSection:NewButton("MangoHub", "BloxFruits Script", function()
+    loadstring(game:HttpGet("https://gitlab.com/L1ZOT/mango-hub/-/raw/main/Mango-Bloxf-Fruits-Beta"))()
+end)
